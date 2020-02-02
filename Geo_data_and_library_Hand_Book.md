@@ -1,13 +1,13 @@
-Geo data Hand Book
+Geo data and library Hand Book
 =======
 
 2019.12.14 GeoSaturday 作業開始
-Geo系データ、ライブラリをプログラマが使いたいときの参考ページ
+Geo系データ、ライブラリ、プログラムをプログラマが使いたいときの参考ページ　記述の追加、間違いの指摘、サンプルコードやリンクの追加は歓迎
 
 ## Geo data用ライブラリ（データ読み書き等基礎系）
 - GDAL/OGR
  
-  - 多数のラスタ/ベクタ形式データの読み書き、操作のライブラリ。
+  - 多数のラスタ/ベクタ形式データの読み書き、操作のライブラリ。（QGISのプラグインとしても利用可能）
   - API インタフェース: C、C++、Python、Java、C#、Ruby、VB6、Perl
   - ライセンス　　X/MIT style Open Source license
   - [WEBサイト](https://gdal.org/)
@@ -33,15 +33,27 @@ Geo系データ、ライブラリをプログラマが使いたいときの参�
   - [ソースコードリポジトリ](https://github.com/mapbox/rasterio)
 
 
-
-
 - GeoPHP
   - [WEBサイト](https://geophp.net/)
   - [ソースコードリポジトリ](https://github.com/phayes/geoPHP)
   - API インタフェース: PHP
   - ライセンス　This library is open-source and dual-licensed under both the Modified BSD License and GPLv2. Either license may be used at your option.
+
+- PDAL
+  - ポイントクラウド用抽象ライブラリ 
+  - [WEBサイト](https://pdal.io/)
+  - API インタフェース: ｃ＋＋
+  - ライセンス　BSD
+  - [ソースコードリポジトリ](https://github.com/PDAL/PDAL)
+
+- MDAL
+  - メッシュデータ用抽象ライブラリ 
+  - [WEBサイト](https://www.mdal.xyz/)
+  - API インタフェース: ｃ＋＋
+  - ライセンス　MIT
+  - [ソースコードリポジトリ](https://github.com/lutraconsulting/MDAL)
   
-  
+
 ## Geo data用ライブラリ（データ操作系）
 - JTS Topology Suite
   - ベクタジオメトリ作成、操作用Javaライブラリ
@@ -59,6 +71,7 @@ Geo系データ、ライブラリをプログラマが使いたいときの参�
 
 
 - NetTopologySuite
+  - JTSを .NET Frameworkに移植したもの
   - [ソースコードリポジトリ](https://github.com/NetTopologySuite/NetTopologySuite)
 
 
@@ -74,26 +87,226 @@ Geo系データ、ライブラリをプログラマが使いたいときの参�
   - ライセンス　MIT License
   - [ソースコードリポジトリ](https://github.com/Turfjs/turf)
 
+- proj
+  - 投影変換ライブラリ
+  - [WEBサイト](https://proj.org/)
+  - ライセンス　MIT License
 
-## Geo data用ライブラリ（表示、操作環境）
+- GeoPandas
+  - Pythonのデータ分析用パッケージPandasで空間情報が利用できるようにした拡張
+  - [WEBサイト](http://geopandas.org/)
+
+- pgRouting
+
+- OTB
+
+- R
+
+- Mapnik
+
+- MapSlicer
+
+## Geo data用ライブラリ　システム（表示、操作環境　デスクトップ、サーバ）
+
+- QGIS
+  - 汎用デスクトップGIS　Server　Web Client
+  - [WEBサイト](https://www.qgis.org/)
+  - API インタフェース: C++  Python　　Web ClientはJavaScript
+  - ライセンス　GNU GPL
+  - [PyQGIS Cock book](https://docs.qgis.org/3.4/ja/docs/pyqgis_developer_cookbook/index.html)
+  - [QGIS API](https://qgis.org/api/)
+
+- GMT
+  - 空間データ描画用コマンドラインツール群
+  - [WEBサイト](https://www.generic-mapping-tools.org/)
+  - ライセンス　LGPL
+  - [リポジトリ](https://github.com/GenericMappingTools)
+
+
+- GRASS GIS
+  - 空間データ加工、描画用コマンド群（QGISのプラグインとしても利用可能）
+  - [WEBサイト](https://grass.osgeo.org)
+  - ライセンス　GNU General Public License (GPL) version 2+
+  - API インタフェース: C, Python, Bourne Shell
+
+- gvSIG Desktop
+  - デスクトップGIS
+  - [WEBサイト](http://www.gvsig.com/)
+  - ライセンス　GNU General Public License (GPL) version 2+
+  - [サポートML](http://www.gvsig.com/en/community/mailing-lists)
+  - [サポート](http://www.gvsig.com/en/gvsig-association)
+  
+- uDig
+  - デスクトップGIS
+  - [WEBサイト](http://udig.refractions.net/)
+  - ライセンス　Dual BSD / EPL (Eclipse Foundation)
+  - API インタフェース: GeoTools, ImageIO-Ext, Java Advanced Imaging, Eclipse Rich Client Platform, Eclipse Modelling Framework
+  - [サポート](http://udig.refractions.net/users/)
+  - [開発者サポート](http://udig.refractions.net/developers/)
+
+
+- OpenJUMP GIS
+  - デスクトップGIS
+  - [WEBサイト](http://www.openjump.org)
+  - ライセンス　GPL
+  - API インタフェース: GeoTools, ImageIO-Ext, Java Advanced Imaging, Eclipse Rich Client Platform, Eclipse Modelling Framework
+  - [コミュニティサポート](http://www.openjump.org/support.html)
+  - [コマーシャルサポート](http://ojwiki.soldin.de/index.php?title=Professional_Support_Page)
+  - [ダウンロードページ](http://sourceforge.net/projects/jump-pilot/files/)
+
+- SAGA
+  - 地形解析、水文解析が強いデスクトップGIS（QGISのプラグインとしても利用可能）
+  - [WEBサイト](http://www.saga-gis.org)
+  - ライセンス　LGPL v2.1 (api); GPLv2 (GUI and modules)
+  - API インタフェース: C++, Python, R
+
+  
+  
+- CloudCompare
+  - 3次元ポイントクラウド編集、加工ソフトウェア
+  - [WEBサイト](https://www.cloudcompare.org/)
+  - ライセンス　GPL2
+  - [リポジトリ](https://github.com/cloudcompare/cloudcompare)
+
+
+
+## Geo data用ライブラリ（表示、操作環境 WEBクライアント）
 
 - OpenLayers
+  - 2次元WEB地図操作用　JavaScriptライブラリ
   - [WEBサイト](https://openlayers.org/)
-
+  - ライセンス　2-clause BSD License
+  
 - LeafLet
+  - 2次元WEB地図操作用　JavaScriptライブラリ
   - [WEBサイト](https://leafletjs.com/)
+  - API インタフェース: JavaScript
+  - ライセンス　BSD
+
+- GeoExt
+  - 2次元WEB地図操作用　JavaScriptライブラリ
+  - [WEBサイト](https://geoext.github.io/geoext3/)
+  - API インタフェース: JavaScript
+  - ライセンス　GPLv3 or BSD License dependent on ExtJS license
+  
   
 - MapBox GL JS
   - [WEBサイト](https://docs.mapbox.com/mapbox-gl-js/api/)
   
 - Cesium
+  - 2次元,3次元WEB地図操作用　JavaScriptライブラリ　WebGL利用 
   - [WEBサイト](https://cesium.com/cesiumjs/)
+  - ライセンス Apache 2.0 license
+  - [コミュニティサポート](https://cesiumjs.org/forum/)
 
 - iTowns
   - [WEBサイト](http://www.itowns-project.org/)
 
 - vts-geospatial
   - [WEBサイト](https://www.melowntech.com/products/vts-geospatial/)
+
+- Potree
+  - ポイントクラウド操作用ライブラリ WebGL利用
+  - [WEBサイト](http://potree.org/)
+  - ライセンス [Copyright (c) 2011-2017, Markus Schütz All rights reserved.](https://github.com/potree/potree/blob/develop/LICENSE)
+
+
+## Geo data用ライブラリ（表示、操作環境 、WEBシステム用フレームワーク）
+- GeoDjango
+  - [WEBサイト](https://docs.djangoproject.com/en/3.0/ref/contrib/gis/#)
+
+- GEOMAJAS
+  - [WEBサイト](http://www.geomajas.org/geomajas)
+  - API インタフェース: Java JavaScript
+  - ライセンス　AGPL
+
+- Mapbender
+  - [WEBサイト](https://www.mapbender.org/)
+  - ライセンス　MIT license
+  - [サポート](https://www.mapbender.org/en/community)
+
+- GeoMoose
+  - [WEBサイト](https://www.geomoose.org/)
+  - ライセンス　MIT license
+  - [顧客サポート](https://www.geomoose.org/info/commercial_support.html)
+  - [コミュニティサポート](https://www.geomoose.org/info/mailing_lists.html)
+
+- GeoNode
+　
+  - 空間コンテンツ管理システム
+  - [WEBサイト](http://geonode.org/)
+  - ライセンス GNU General Public License (GPL) version 2.0
+  - API インタフェース: Python (Django)
+  - [サポート](http://opengeo.org/technology/geonode/)
+
+  
+## Geo data 配信、変換、WEB Service system
+- GeoServer
+  - OGCプロトコル等各種空間データ配信サーバ
+  - [WEBサイト](http://geoserver.org/)
+- MapServer
+  - OGCプロトコル等各種空間データ配信サーバ
+  - [WEBサイト](https://mapserver.org/)
+  
+- MapProxy
+  - ラスタ配信プロトコル変換、座標変換、画像形式変換プロキシサーバ
+  - [WEBサイト](https://mapproxy.org/)
+
+- ZOO　Project
+  - WPS（Web processing service)システム
+  - [WEBサイト](http://zoo-project.org/)
+
+- TileServerGL
+  - タイル（ベクタ、ラスタ）配信サーバ
+  - [WEBサイト](http://tileserver.org/)
+  - [リポジトリ](https://github.com/klokantech/tileserver-gl)
+  - [Live demo](https://maps.klokantech.com/)
+
+- t-rex
+  - バイナリベクタタイル配信サーバ
+  - [WEBサイト](https://t-rex.tileserver.ch/)
+  - [リポジトリ](https://github.com/t-rex-tileserver/t-rex/)
+
+- GeoMesa
+  - 巨大空間データ解析、配信サービス
+  - ライセンス Apache License, Version 2.0
+  - [WEBサイト](https://www.geomesa.org/)
+  - [リポジトリ](https://github.com/locationtech/geomesa)
+  - [ユーザマニュアル](https://www.geomesa.org/documentation/user/index.html)
+
+- MapCache
+- deegree
+- ncWMS
+- EOxServer
+- GeoNetwork
+- pycsw
+- pyWPS
+- QGIS Server
+- istSOS
+- 52 North SOS
+- 52 North WPS
+- Actina
+  
+## 空間データ格納 データ管理システム
+- PostGIS
+- Spatialite
+- Rasdamen
+- MySQL
+- GeoGig
+  - 空間データ分散バージョン管理システム
+  - ライセンス Eclipse Distribution License 1.0 (BSD)
+  - [WEBサイト](http://geogig.org/)
+  - [リポジトリ](https://github.com/locationtech/geogig)
+  - [ドキュメント](http://geogig.org/docs/index.html)
+
+## protocol 　　空間データネットワーク配信用等規約
+- WMS
+- WFS
+- WPS
+- CSW
+- Slippy tile (XYZ tile)
+- TMS
+- 3DTiles
 
 
 ## Vector data
@@ -134,7 +347,93 @@ Geo系データ、ライブラリをプログラマが使いたいときの参�
 
 - Comma Separated Value (.csv)
   - [GDAL page](https://gdal.org/drivers/vector/csv.html)
+  
+   sample code   read csv layer using QGIS3.x API 
+  ```Python=
+   import os
+   from qgis.core import *
+   from qgis.gui import *
+   from qgis.PyQt.QtWidgets import QAction, QMainWindow
+   from qgis.PyQt.QtCore import Qt
+	
+	#
+	#      QGIS インストール位置を環境変数 QGIS_PREFIX_PATH から取得
+   qgis_installed=os.environ['QGIS_PREFIX_PATH']
+ 
+    #               QGIS インストールパス指定
+   QgsApplication.setPrefixPath(qgis_installed, True)
+ 
 
+    # Create a reference to the QgsApplication.
+    # Setting the second argument to True enables the GUI.  We need
+    # this since this is a custom application.
+
+   qgs = QgsApplication([], True)
+
+   # load providers
+   qgs.initQgis()
+
+   uri='file:///C:/work/csvtest/hinan.csv?delimiter=,&encoding=UTF-8&xField=x&yField=y'
+
+
+   output_dir = 'C:/work/csvtest/hinan.tif'
+
+   csvlayer = QgsVectorLayer(uri, "hinan", "delimitedtext")
+
+
+   #    CSV レイヤのオープン成功
+   if csvlayer.isValid():
+         canvas = QgsMapCanvas()
+         
+         canvas.setCanvasColor(Qt.white)
+    # enable this for smooth rendering
+         canvas.enableAntiAliasing(True)
+
+         print("Layer load OK")
+
+         
+         canvas.setExtent(csvlayer.extent())
+         
+         canvas.setLayers([csvlayer])
+         
+         canvas.refresh()
+             
+
+         # rendering my map canvas to tif image
+         settings = canvas.mapSettings()
+         settings.setLayers([csvlayer])
+         job = QgsMapRendererParallelJob(settings)
+         job.start()
+         job.waitForFinished()
+         image = job.renderedImage()
+         image.save(output_dir)
+    
+
+         
+         #QgsProject.instance().addMapLayer(csvlayer)
+         #features = csvlayer.getFeatures()
+
+         #for feature in features:
+         #      attrs = feature.attributes()
+         #      print(attrs)
+               
+               
+
+   #   csv レイヤオープン失敗
+   else:
+       print("csv Layer failed to load!")
+     
+     
+     
+   # Write your code here to load some layers, use processing
+   # algorithms, etc.
+
+   # Finally, exitQgis() is called to remove the
+   # provider and layer registries from memory
+   qgs.exitQgis()
+
+  ```
+  
 - CSW - OGC CSW (Catalog Service for the Web)
   - [GDAL page](https://gdal.org/drivers/vector/csw.html)
 
@@ -205,7 +504,56 @@ Geo系データ、ライブラリをプログラマが使いたいときの参�
 
 - GPKG – GeoPackage vector
   - [GDAL page](https://gdal.org/drivers/vector/gpkg.html)
+  
+   shape file のGeopackage変換
+  ```Shell=
+  % ogr2ogr -f GPKG filename.gpkg abc.shp
+  ```
+   ディレクトリ内 複数shape file のGeopackage変換
+  ```Shell=
+  % ogr2ogr -f GPKG filename.gpkg ./path/to/dir
+  ```
+     PostGISデータベース のGeopackage変換
+  ```Shell=
+  % ogr2ogr -f GPKG filename.gpkg PG:'dbname=mydatabase host=localhost'
+  ```
+     QGIS python script での ogrドライバでのGeopackage利用
+  ```python=
+  import os
+  from qgis.core import *
 
+  places_layer = "/home/project/data/data.gpkg|layername=places"
+  
+  vlayer = QgsVectorLayer(places_layer, "layername", "ogr")
+  
+  if vlayer.isValid():
+         features = vlayer.getFeatures()
+
+         for feature in features:
+               attrs = feature.attributes()
+               print(attrs)
+  
+  ``` 
+  　　
+  
+  - [OGC GeoPackage](https://www.geopackage.org/)
+    - [Getting Started With GeoPackage](http://www.geopackage.org/guidance/getting-started.html)
+  - [leaflet-geopackage — Load GeoPackage layers in Leaflet](https://github.com/ngageoint/geopackage-js/tree/master/leaflet)
+  
+   sample code 
+  ```JavaScript=
+  // Load the Rivers GeoPackage and display the feature layer
+   L.geoPackageFeatureLayer([], {
+    geoPackageUrl:     'http://ngageoint.github.io/GeoPackage/examples/rivers.gpkg',
+    layerName: 'rivers'
+   }).addTo(map);
+  ```
+  
+  - [GeoPackage Plugin — GeoTools 23-SNAPSHOT User Guide](https://docs.geotools.org/latest/userguide/library/data/geopackage.html)
+  
+  - [Learn spatial SQL and master GeoPackage with QGIS 3](https://medium.com/@GispoFinland/learn-spatial-sql-and-master-geopackage-with-qgis-3-16b1e17f0291)
+  
+  
 - GPSBabel
   - [GDAL page](https://gdal.org/drivers/vector/gpsbabel.html)
 
